@@ -15,7 +15,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -36,7 +36,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="grey"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.302789 -0.114578 0.520859"/>
@@ -57,7 +57,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.302789 -0.114578 0.460859"/>
@@ -78,7 +78,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="grey"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.302789 -0.114578 0.436859"/>
@@ -99,7 +99,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="white"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.278789 -0.114578 0.358359"/>
@@ -120,7 +120,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="grey"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.281789 -0.114578 0.358359"/>
@@ -141,7 +141,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="white"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.287789 -0.114578 0.178359"/>
@@ -162,7 +162,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_7_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="grey"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.290789 -0.114578 0.178359"/>
@@ -183,7 +183,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.307539 -0.237219 0.14375"/>
@@ -204,7 +204,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_9_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="white"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.302789 -0.258219 0.178359"/>
@@ -225,7 +225,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_10_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.314789 -0.321969 0.173359"/>
@@ -246,7 +246,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_11_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="white"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.335789 -0.307578 0.178109"/>
@@ -267,7 +267,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_12_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.307538 -0.375732 0.1435"/>
@@ -288,7 +288,7 @@
     <geometry>
       <mesh filename="package://robotarm_description/meshes/link_13_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.302789 -0.396732 0.178109"/>
