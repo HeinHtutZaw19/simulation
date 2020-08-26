@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robotarm_description
+    relative_path: urdf/robotarm.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/robotarm.srdf
+  CONFIG:
+    author_name: test
+    author_email: test@gmail.com
+    generated_timestamp: 1598275019

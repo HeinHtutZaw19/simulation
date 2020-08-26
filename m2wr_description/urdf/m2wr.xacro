@@ -91,18 +91,18 @@
     <joint name="joint_right_wheel">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="joint_right_wheel">
+    <actuator name="joint_right_wheel_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
-  <transmission name="joint_left_wheel">
+  <transmission name="joint_left_wheel_tran">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_left_wheel">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="joint_left_wheel">
+    <actuator name="joint_left_wheel_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
