@@ -15,7 +15,7 @@
 </gazebo>
 
 <gazebo reference="link_1_1">
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -29,7 +29,7 @@
 </gazebo>
 
 <gazebo reference="link_3_1">
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -43,7 +43,7 @@
 </gazebo>
 
 <gazebo reference="link_5_1">
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -57,7 +57,7 @@
 </gazebo>
 
 <gazebo reference="link_7_1">
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -85,14 +85,14 @@
 </gazebo>
 
 <gazebo reference="link_11_1">
-  <material>Gazebo/White</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="link_12_1">
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -106,7 +106,7 @@
 </gazebo>
 
 <gazebo reference="grabber_1">
-  <material>Gazebo/Grey</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
