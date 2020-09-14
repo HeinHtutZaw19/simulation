@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ra6_description
+    relative_path: urdf/ra6.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ra6.srdf
+  CONFIG:
+    author_name: YTUMcE6thbatch
+    author_email: williamfox.wj@gmail.com
+    generated_timestamp: 1599988241
