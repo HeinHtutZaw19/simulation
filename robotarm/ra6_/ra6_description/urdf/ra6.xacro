@@ -1,9 +1,18 @@
 <?xml version="1.0" ?>
 <robot name="ra6" xmlns:xacro="http://www.ros.org/wiki/xacro">
-
+constant double pi = 3.14
 <xacro:include filename="$(find ra6_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find ra6_description)/urdf/ra6.trans" />
 <xacro:include filename="$(find ra6_description)/urdf/ra6.gazebo" />
+<link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="0.001945238815569592 2.5277680393287483e-10 0.0029999999999930347"/>
@@ -688,11 +697,12 @@
   <child link="link_2_1"/>
 </joint>
 
-<joint name="joint_1" type="continuous">
+<joint name="joint_1" type="revolute">
   <origin rpy="0 0 0" xyz="0.0 0.0 0.024"/>
   <parent link="link_2_1"/>
   <child link="link_3_1"/>
   <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="30" velocity="1.0" lower="-3.141" upper="3.141" />
 </joint>
 
 <joint name="Rigid4" type="fixed">
@@ -701,11 +711,12 @@
   <child link="link_4_1"/>
 </joint>
 
-<joint name="joint_2" type="continuous">
+<joint name="joint_2" type="revolute">
   <origin rpy="0 0 0" xyz="0.0 -0.003 0.0"/>
   <parent link="link_4_1"/>
   <child link="link_5_1"/>
   <axis xyz="0.0 -1.0 -0.0"/>
+  <limit effort="30" velocity="1.0" lower="-1.05" upper="1.3" />
 </joint>
 
 <joint name="Rigid6" type="fixed">
@@ -714,11 +725,12 @@
   <child link="link_6_1"/>
 </joint>
 
-<joint name="joint_3" type="continuous">
+<joint name="joint_3" type="revolute">
   <origin rpy="0 0 0" xyz="0.0 -0.003 0.0"/>
   <parent link="link_6_1"/>
   <child link="link_7_1"/>
   <axis xyz="0.0 -1.0 0.0"/>
+  <limit effort="30" velocity="1.0" lower="-0.785" upper="1.57" />
 </joint>
 
 <joint name="Rigid8" type="fixed">
@@ -727,11 +739,12 @@
   <child link="link_8_1"/>
 </joint>
 
-<joint name="joint_4" type="continuous">
+<joint name="joint_4" type="revolute">
   <origin rpy="0 0 0" xyz="0.021 0.00475 -0.034609"/>
   <parent link="link_8_1"/>
   <child link="link_9_1"/>
   <axis xyz="1.0 0.0 0.0"/>
+  <limit effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
 </joint>
 
 <joint name="Rigid10" type="fixed">
@@ -740,11 +753,12 @@
   <child link="link_10_1"/>
 </joint>
 
-<joint name="joint_5" type="continuous">
+<joint name="joint_5" type="revolute">
   <origin rpy="0 0 0" xyz="-0.014391 -0.021 -0.00475"/>
   <parent link="link_10_1"/>
   <child link="link_11_1"/>
   <axis xyz="-0.0 -1.0 -0.0"/>
+  <limit effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
 </joint>
 
 <joint name="Rigid12" type="fixed">
@@ -753,11 +767,12 @@
   <child link="link_12_1"/>
 </joint>
 
-<joint name="joint_6" type="continuous">
+<joint name="joint_6" type="revolute">
   <origin rpy="0 0 0" xyz="0.021 0.004749 -0.034609"/>
   <parent link="link_12_1"/>
   <child link="link_13_1"/>
   <axis xyz="1.0 -0.0 0.0"/>
+  <limit effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
 </joint>
 
 <joint name="Rigid32" type="fixed">

@@ -4,6 +4,7 @@ project(ra6_moveit_config)
 
 find_package(catkin REQUIRED
   COMPONENTS
+    dynamic_reconfigure
     interactive_markers
     moveit_core
     moveit_visual_tools
@@ -18,11 +19,16 @@ find_package(catkin REQUIRED
     tf2_ros
     tf2_eigen
     tf2_geometry_msgs
+    roscpp
+    rospy
 )
 
 find_package(Eigen3 REQUIRED)
 find_package(Boost REQUIRED system filesystem date_time thread)
 
+generate_dynamic_reconfigure_options(
+  cfg/DynamicParam.cfg
+)
 
 catkin_package(
   LIBRARIES
@@ -49,3 +55,7 @@ install(PROGRAMS
 )
 
 install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+
+add_executable(dynamic_input_node src/dynamic_input.cpp)
+target_link_libraries(dynamic_input_node ${catkin_LIBRARIES})
+add_dependencies(dynamic_input_node ${PROJECT_NAME}_gencfg)

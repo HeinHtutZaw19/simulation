@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/henry/ROS/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/henry/ROS/src/dynamic_tutorials/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

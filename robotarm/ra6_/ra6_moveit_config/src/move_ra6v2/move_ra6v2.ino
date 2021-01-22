@@ -1,7 +1,7 @@
 
 #include <ros.h>
 #include <std_msgs/Float64.h>
-#include <sensor_msgs/JointState.h>
+#include <control_msgs/FollowJointTrajectoryActionFeedback.h>
 #include <stdlib.h>
 #include <MeMegaPi.h>
 #include <MeEncoderOnBoard.h>
@@ -13,17 +13,14 @@ float angle[6] = {0,0,0,0,0,0};
 
 Servo dof4,dof5,dof6;
 
-std_msgs::Float64 mydata;
-
-void cmd_cb(const sensor_msgs::JointState& cmd_arm)
+void cmd_cb(const control_msgs::FollowJointTrajectoryActionFeedback& cmd_arm)
 {
-  angle[0] = cmd_arm.position[0];
-  angle[1] = cmd_arm.position[1];
-  angle[2] = cmd_arm.position[2];
-  angle[3] = cmd_arm.position[3];
-  angle[4] = cmd_arm.position[4];
-  angle[5] = cmd_arm.position[5];
-  mydata.data = angle[0];
+  angle[0] = cmd_arm->actual.position[0];
+  angle[1] = cmd_arm->actual.position[1];
+  angle[2] = cmd_arm->actual.position[2];
+  angle[3] = cmd_arm->actual.position[3];
+  angle[4] = cmd_arm->actual.position[4];
+  angle[5] = cmd_arm->actual.position[5];
  }
 MeEncoderOnBoard Encoder_1(SLOT1);
     MeEncoderOnBoard Encoder_2(SLOT2);
@@ -63,7 +60,8 @@ MeEncoderOnBoard Encoder_1(SLOT1);
       }
     }
 
-ros::Subscriber<sensor_msgs::JointState> sub("/joint_states", cmd_cb);
+std_msgs::Float64 mydata;
+ros::Subscriber<control_msgs::FollowJointTrajectoryActionFeedback> sub("/manipulator/follow_joint_trajectory/feedback", cmd_cb);
 ros::Publisher chatter("chatter", &mydata);
 
 void setup()
@@ -109,7 +107,7 @@ void loop()
   dof4.write(angle[3] * 180 / M_PI + 90);
   dof5.write(-angle[4] * 180 / M_PI + 90) ;
   dof6.write(angle[5] * 180 / M_PI + 90);
-  chatter.publish(&mydata);
+  
   nh.spinOnce();
   delay(1);
   Encoder_1.loop();
