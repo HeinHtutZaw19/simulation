@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ra6_v2_description">
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="control"/>
+  </gazebo>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0140542711697544 -2.18207360791478E-08 0.00299999999999978"
+        rpy="0 0 0" />
+      <mass
+        value="0.47945628174031" />
+      <inertia
+        ixx="0.00321201871122315"
+        ixy="1.58019630837799E-10"
+        ixz="-1.82396172262219E-17"
+        iyy="0.0031224531436927"
+        iyz="-1.04833939071884E-17"
+        izz="0.00633159511726462" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.564705882352941 0.556862745098039 0.545098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="0.00465582272277912 -1.12147552952524E-07 -0.0388814692501041"
+        rpy="0 0 0" />
+      <mass
+        value="0.847797073878397" />
+      <inertia
+        ixx="0.00191250789301448"
+        ixy="4.52157907236518E-09"
+        ixz="4.11436397082813E-05"
+        iyy="0.0016595870711532"
+        iyz="1.04789099927639E-09"
+        izz="0.00272115397239837" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.564705882352941 0.556862745098039 0.545098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rigid_1"
+    type="fixed">
+    <origin
+      xyz="0 0 0.078"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="4.38172552685856E-08 -1.25521381516697E-05 0.0385864093403186"
+        rpy="0 0 0" />
+      <mass
+        value="0.0959374083475846" />
+      <inertia
+        ixx="0.000141767922201664"
+        ixy="-3.0047571678898E-08"
+        ixz="-1.29608727630884E-09"
+        iyy="0.000114437590101475"
+        iyz="6.96911959091854E-07"
+        izz="7.57931314663248E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.768627450980392 0.207843137254902 0.152941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.011325"
+      rpy="0 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="30" velocity="1.0" lower="-3.141" upper="3.141" />
+
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.000676327095972762 -0.000267741344243816 0.0846265565078096"
+        rpy="0 0 0" />
+      <mass
+        value="0.15459039863482" />
+      <inertia
+        ixx="0.000700616768380182"
+        ixy="-1.30679472918762E-08"
+        ixz="-5.06269794302915E-06"
+        iyy="0.000687122012981791"
+        iyz="2.55856521066154E-07"
+        izz="7.01358986108912E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.564705882352941 0.556862745098039 0.545098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.079175"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="30" velocity="1.0" lower="-1.05" upper="1.3" />
+
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.0689892331340525 0.000128208989230841 0.00303993015687587"
+        rpy="0 0 0" />
+      <mass
+        value="0.106330141972339" />
+      <inertia
+        ixx="3.11480390939474E-05"
+        ixy="1.10639450234638E-06"
+        ixz="-1.2787371632868E-05"
+        iyy="0.000251799011261306"
+        iyz="4.73970698854002E-07"
+        izz="0.000238311887582398" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0.0014944 0 0.17999"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="30" velocity="1.0" lower="-0.785" upper="1.57" />
+
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.0352186303151772 0.000651786261046783 -0.000240852600342567"
+        rpy="0 0 0" />
+      <mass
+        value="0.0508120689092489" />
+      <inertia
+        ixx="1.14032161816049E-05"
+        ixy="9.69456779605165E-07"
+        ixz="1.1757033683992E-07"
+        iyy="1.90901672744309E-05"
+        iyz="2.11574511431435E-08"
+        izz="2.47887618141905E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.972549019607843 0.968627450980392 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.14364 -0.00016175 -0.0015988"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
+
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.0407311125592921 -0.00227194309173936 0.0048575829153889"
+        rpy="0 0 0" />
+      <mass
+        value="0.0806645184388653" />
+      <inertia
+        ixx="4.30732285547851E-05"
+        ixy="-3.80757762759464E-06"
+        ixz="-7.48546182306301E-06"
+        iyy="6.15131524088532E-05"
+        iyz="-8.39861717315056E-07"
+        izz="7.19395388835183E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.972549019607843 0.968627450980392 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0.04935 -5.5724E-05 -0.00029933"
+      rpy="0 0 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 -1 0" />
+    <limit 
+      effort="30" velocity="1.0" lower="-1.57" upper="1.57" />
+  
+  </joint>
+  <link
+    name="eef_base">
+    <inertial>
+      <origin
+        xyz="0.0229124462951694 -2.60638360647936E-05 0.00020848991544109"
+        rpy="0 0 0" />
+      <mass
+        value="0.0222444378599161" />
+      <inertia
+        ixx="7.05860430009182E-06"
+        ixy="5.00108122142689E-09"
+        ixz="-5.17966834745354E-08"
+        iyy="1.14260551522817E-05"
+        iyz="-1.13814694746793E-08"
+        izz="1.39119959096935E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/eef_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.972549019607843 0.968627450980392 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/eef_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="continuous">
+    <origin
+      xyz="0.08877 -0.00010102 0.00075224"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="eef_base" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="gripper_target">
+    <inertial>
+      <origin
+        xyz="0.000499983443461582 -3.87878472091208E-07 4.05838497624655E-06"
+        rpy="0 0 0" />
+      <mass
+        value="1.5707963267947E-05" />
+      <inertia
+        ixx="1.02098125119427E-10"
+        ixy="-5.66059615729079E-14"
+        ixz="4.2148560239533E-13"
+        iyy="5.23599419817768E-11"
+        iyz="-4.79683120808511E-16"
+        izz="5.23634492601128E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/gripper_target.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/gripper_target.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rigid_2"
+    type="fixed">
+    <origin
+      xyz="0.04208 -4.789E-05 0.00035659"
+      rpy="0 0 0" />
+    <parent
+      link="eef_base" />
+    <child
+      link="gripper_target" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="claw_1">
+    <inertial>
+      <origin
+        xyz="0.0346939000678241 -0.00579914714961982 0.000267372897620466"
+        rpy="0 0 0" />
+      <mass
+        value="0.00663394989678391" />
+      <inertia
+        ixx="2.68791318978528E-07"
+        ixy="4.58910610812215E-08"
+        ixz="-2.57852478406989E-08"
+        iyy="3.20910484993189E-06"
+        iyz="-1.87136329466492E-10"
+        izz="3.33438674573977E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/claw_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/claw_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_7"
+    type="continuous">
+    <origin
+      xyz="0.057459 -0.018065 0.00040427"
+      rpy="0 0 0" />
+    <parent
+      link="eef_base" />
+    <child
+      link="claw_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="claw_2">
+    <inertial>
+      <origin
+        xyz="0.0346625839944625 0.00598083615355567 0.000321197099321879"
+        rpy="0 0 0" />
+      <mass
+        value="0.00663394989678414" />
+      <inertia
+        ixx="2.69361151296823E-07"
+        ixy="-6.12834299678873E-08"
+        ixz="-2.62725254486619E-08"
+        iyy="3.20854333396856E-06"
+        iyz="-1.0984792750464E-09"
+        izz="3.33437842938532E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/claw_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ra6_v2_description/meshes/claw_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_8"
+    type="continuous">
+    <origin
+      xyz="0.057499 0.017935 0.0005699"
+      rpy="0 0 0" />
+    <parent
+      link="eef_base" />
+    <child
+      link="claw_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+<transmission name="joint_1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint_1">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint_1_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint_2_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint_2">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint_2_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint_3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint_3">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint_3_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint_4_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint_4">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint_4_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint_5_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint_5">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint_5_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint_6_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint_6">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint_6_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint_7_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint_7">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint_7_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint_8_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint_8">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint_8_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<gazebo reference="base_link">
+  <material>Gazebo/Black</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="base">
+  <material>Gazebo/FlatBlack</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="link_1">
+  <material>Gazebo/White</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="link_2">
+  <material>Gazebo/FlatBlack</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="link_3">
+  <material>Gazebo/FlatBlack</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="link_4">
+  <material>Gazebo/White</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="link_5">
+  <material>Gazebo/Grey</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="eef_base">
+  <material>Gazebo/FlatBlack</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="claw_1">
+  <material>Gazebo/Black</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="claw_2">
+  <material>Gazebo/Black</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+<link name="world" />
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+</robot>

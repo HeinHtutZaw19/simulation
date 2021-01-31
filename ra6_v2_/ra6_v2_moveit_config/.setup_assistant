@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ra6_v2_description
+    relative_path: urdf/ra6_v2.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ra6_v2_description.srdf
+  CONFIG:
+    author_name: William Jones
+    author_email: williamfox.wj@gmail.com
+    generated_timestamp: 1611899500
